@@ -152,8 +152,8 @@ void insert(int A[],int N)
 
 ### 7.11.5多相合并
 
-![image-20211028235735310](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211028235735310.png)
+![image](https://user-images.githubusercontent.com/92200209/139532018-f5265dc0-1992-40c5-aff9-77bb23b85d2d.png)
 
 ### 7.11.6替换选择
 
-![QQ图片20211028235519](E:\bianchengclass\QQ图片20211028235519.png)
+![QQ图片20211028235519](https://user-images.githubusercontent.com/92200209/139531998-e9abf25f-bdc6-4bee-bddc-6adc2f4b6c4c.png)
