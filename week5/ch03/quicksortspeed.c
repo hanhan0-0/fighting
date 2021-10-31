@@ -41,15 +41,26 @@ void qsort(int A[], int left, int right,int k)
 	int i, j, pivot;//pivot是枢纽元
 	if (left + 3 <= right)
 	{
-		if(k==1)//枢纽元选前中后的中位数
-		   pivot = median3(A, left, right);
+		if (k == 1)//枢纽元选前中后的中位数
+		{
+			pivot = median3(A, left, right);
+			i = left;
+			j = right - 1;
+		}
 		if (k == 2)//第一个元素
+		{
 			pivot = A[0];
+			swap(&A[0], &A[right]);
+			i = left-1;
+			j = right ;
+		}
 		if (k == 3)//一个随机元素
 		{
 			srand((unsigned)time(NULL));
 			i = rand()%(right-left+1);
 			pivot = A[i];
+			i = left - 1;
+			j = right;
 		}
 		if (k == 4)//平均值
 		{
@@ -57,9 +68,10 @@ void qsort(int A[], int left, int right,int k)
 			for (i = 0; i < (right - left + 1); i++)
 				sum = sum + A[i];
 			pivot = sum / (right - left + 1);
+			i = left - 1;
+			j = right;
 		}
-		i = left;
-		j = right - 1;
+		
 		for (;;)
 		{
 			while (A[++i] < pivot) {}
@@ -84,26 +96,23 @@ int main()
 {
 	int i,a;
 	i = 100000;
-	int A[100000];//顺序
-	//int B[100000];//逆序
+	//int A[100000];//顺序
+	int B[100000];//逆序
 	//int C[100000];//随机
 	clock_t start, finish;
 	double  T;
 	//快速排序
 	a = 0;
-	while (i--)
+	/*while (i--)
 	{
 		A[a++] = 100000 - i;
-	}
-	i = 100000;
-	a = 0;
-	/*while (i--)
+	}*/
+	while (i--)
 	{
 		B[a++] =  i;
 	}
-	i = 100000;
-	a = 0;
-	int b;
+	
+	/*int b;
 	while (i--)
 	{
 		srand((unsigned)time(NULL));
@@ -111,14 +120,14 @@ int main()
 		C[a++] = b;
 	}*/
 	start = clock();
-	quicksort(A, 100000,1);
+	//quicksort(A, 100000,1);
 	//quicksort(A, 100000,2);
 	//quicksort(A, 100000,3);
 	//quicksort(A, 100000,4);
-	//quicksort(B, 100000,2);
-	//quicksort(A, 100000,3);
-	//quicksort(A, 100000,1);
-	//quicksort(A, 100000,4);
+	quicksort(B, 100000,2);
+	//quicksort(B, 100000,3);
+	//quicksort(B, 100000,1);
+	//quicksort(B, 100000,4);
 	//quicksort(C, 100000,1);
 	//quicksort(C, 100000,2);
 	//quicksort(C, 100000,4);
