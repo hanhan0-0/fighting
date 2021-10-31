@@ -60,7 +60,7 @@ void qsort(int A[], int left, int right,int k)
 			i = rand()%(right-left+1);
 			pivot = A[i];
 			i = left - 1;
-			j = right;
+			j = right+1;
 		}
 		if (k == 4)//平均值
 		{
@@ -69,7 +69,7 @@ void qsort(int A[], int left, int right,int k)
 				sum = sum + A[i];
 			pivot = sum / (right - left + 1);
 			i = left - 1;
-			j = right;
+			j = right+1;
 		}
 		
 		for (;;)
