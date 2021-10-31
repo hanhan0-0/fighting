@@ -95,9 +95,9 @@ void quicksort(int A[], int N,int k)
 int main()
 {
 	int i,a;
-	i = 100000;
+	i = 10000;
 	//int A[100000];//顺序
-	int B[100000];//逆序
+	int B[10000];//逆序
 	//int C[100000];//随机
 	clock_t start, finish;
 	double  T;
@@ -124,7 +124,7 @@ int main()
 	//quicksort(A, 100000,2);
 	//quicksort(A, 100000,3);
 	//quicksort(A, 100000,4);
-	quicksort(B, 100000,2);
+	quicksort(B, 10000,2);
 	//quicksort(B, 100000,3);
 	//quicksort(B, 100000,1);
 	//quicksort(B, 100000,4);
