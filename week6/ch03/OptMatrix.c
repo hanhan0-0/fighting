@@ -24,8 +24,12 @@ void OptMatrix(const long C[], int N,int M[][10], int LastChange[][10])
 }
 int main()
 {
-	int a[9][9];
-	int b[9][9];
-	int c[10] = { 0,5,3,5,6,2,6,2,4,7 };
-	OptMatrix(c, 10, a, b);
+	int i;
+	int a[10][10];
+	int b[10][10];
+	long c[10] = { 0,5,3,5,6,2,6,2,4,7 };
+	OptMatrix(c, 9, a, b);
+	printf("最小次数为：\n");
+	printf("%d", b[1][6]);
+	return 0;
 }
